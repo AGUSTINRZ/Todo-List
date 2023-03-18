@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    <title>Todo List</title>
+</head>
+<body class="flex justify-center items-center min-h-screen min-w-[100vw] bg-gradient-to-br from-green-400 via-blue-700 to-red-600 font-outfit">
+    
+    <div class="p-4 bg-white/20 rounded-lg min-w-[30vw] m-2 shadow-2xl">
+        <div class="text-white">
+            <h1 class="text-3xl font-medium mb-4">🍉 Todo List</h1>
+            <div class="flex">
+                <input type="text" data-todo-input class="bg-white/40 w-full p-3 placeholder:text-white rounded-l-md outline-none" placeholder="Add a task todo...">
+                <button data-todo-add class="bg-green-500 rounded-r-md p-3 flex gap-2 hover:bg-green-600 transition-colors">
+                    Add <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentcolor" class="w-6"><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                </button>
+            </div>
+        </div>
+        <ul data-uncompleted-todos class="mt-2 text-white text-lg max-h-[320px] overflow-y-auto">
+            <li class="flex items-center text-black text-lg bg-white rounded-md mt-2 py-2 pl-2 pr-3 gap-1">
+                <input type="checkbox" class="w-5 h-5 accent-green-500 cursor-pointer">
+                <span class="mr-auto max-w-full"></span>
+                <button class="text-red-500 hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentcolor" class="w-6 aspect-square"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                </button>
+            </li>
+        </ul>
+        <ul data-completed-todos class="mt-2 text-white text-lg max-h-[320px] overflow-y-auto">
+        </ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
